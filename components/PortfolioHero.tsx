@@ -22,7 +22,7 @@ const cardHover: Variants = {
 
 export default function PortfolioHero() {
   return (
-    <section className="w-full bg-[#F2E8C6] px-6 md:px-24 py-12 md:py-20">
+    <section className="w-full bg-[#fdf9ec] px-6 md:px-24 py-12 md:py-20">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="relative flex justify-start">
           {/* Constrain width so the image never grows too large */}

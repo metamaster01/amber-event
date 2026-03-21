@@ -9,6 +9,7 @@ import FooterSection from "@/components/footersection";
 import HeroStatsCard from "@/components/hero-stats-card";
 import GallerySection from "@/components/gallery_section";
 import PortfolioHero from "@/components/PortfolioHero";
+import WhyChooseUs from "@/components/WhyChooseSection";
 export default function Home() {
   return (
     <div className="overflow-x-hidden min-h-screen">
@@ -16,6 +17,7 @@ export default function Home() {
       <HeroSection />
       <HeroStatsCard/>
       <About />
+      <WhyChooseUs />
       <GallerySection />
       <Services/>
       <PortfolioHero />

@@ -294,7 +294,7 @@ const GallerySection = () => {
         }
       `}</style>
 
-      <section className="relative py-20 px-6 bg-gradient-to-br from-[#F2E8C6] via-[#FFF8E7] to-[#F2E8C6] overflow-hidden">
+      <section className="relative py-20 px-6 bg-gradient-to-br from-[#f8f2df] via-[#f8f4ed] to-[#fffefc] overflow-hidden">
         {/* Decorative Elements */}
         <div className="absolute inset-0 -z-10">
           <div

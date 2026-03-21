@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 export default function PortfolioPage() {
   return (
-    <div className="bg-[#F3E7D0] text-[#B84C0E] min-h-screen flex flex-col">
+    <div className="bg-[#fcf7ee] text-[#B84C0E] min-h-screen flex flex-col">
       {/* 🖼 Hero Section */}
       {/* <section className="relative w-full flex justify-start pl-[80px]">
         <div className="max-w-5xl w-full relative">
