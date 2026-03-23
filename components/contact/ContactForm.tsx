@@ -220,11 +220,11 @@ export default function ContactForm() {
                     Phone Number
                   </div>
                   <a
-                    href="tel:+919235657694"
+                    href="tel:+917008334010"
                     className="text-gray-700 font-medium text-sm hover:text-pink-500 transition-colors"
                     style={{ fontFamily: "'DM Sans', sans-serif" }}
                   >
-                    +91 9235657694
+                    +91 7008334010
                   </a>
                 </div>
               </div>
