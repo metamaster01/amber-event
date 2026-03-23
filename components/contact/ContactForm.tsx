@@ -131,7 +131,7 @@ export default function ContactForm() {
     }
 
     try {
-      const { error } = await supabase.from("contact").insert([
+      const { error } = await supabase.from("contact_amber").insert([
         {
           name: form.name.trim(),
           email: form.email.trim().toLowerCase(),

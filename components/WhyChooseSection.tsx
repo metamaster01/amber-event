@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -272,6 +273,8 @@ export default function WhyChooseUs() {
 
             {/* Bottom CTA */}
             <div className="flex items-center gap-5 mt-4">
+
+              <Link href="/contact">
               <button
                 className="group relative overflow-hidden bg-pink-500 text-white px-7 py-3.5 rounded-full text-sm font-semibold tracking-wide shadow-md shadow-pink-200 hover:shadow-pink-300/60 hover:scale-105 transition-all duration-300"
                 style={{ fontFamily: "'DM Sans', sans-serif" }}
@@ -284,6 +287,7 @@ export default function WhyChooseUs() {
                   </svg>
                 </span>
               </button>
+              </Link>
               <span
                 className="text-sm text-gray-400"
                 style={{ fontFamily: "'DM Sans', sans-serif" }}

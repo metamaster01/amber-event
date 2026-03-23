@@ -1,9 +1,10 @@
 "use client"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import Image from "next/image"
 import { X } from "lucide-react"
 
 const GallerySection = () => {
+  const sectionRef = useRef<HTMLElement>(null);
   const [selectedImage, setSelectedImage] = useState<number | null>(null)
   const [loaded, setLoaded] = useState(false)
 
@@ -79,7 +80,8 @@ const GallerySection = () => {
   }, [selectedImage])
 
   return (
-    <>
+    <div 
+      id="gallery">
       <style jsx global>{`
         @keyframes fadeInUp {
           from {
@@ -486,7 +488,7 @@ const GallerySection = () => {
           </div>
         )}
       </section>
-    </>
+    </div>
   )
 }
 

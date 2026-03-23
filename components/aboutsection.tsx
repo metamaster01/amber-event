@@ -5,6 +5,7 @@ import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -407,11 +408,13 @@ export default function AboutSection() {
 
             {/* CTA Button */}
             <div className="flex items-center gap-4">
-              <button
-                ref={btnRef}
-                className="group relative overflow-hidden bg-pink-500 text-white px-8 py-4 rounded-full font-semibold text-[15px] tracking-wide shadow-lg shadow-pink-300/50 hover:shadow-pink-400/60 hover:scale-105 transition-all duration-300 active:scale-100"
-                style={{ fontFamily: "'DM Sans', sans-serif" }}
-              >
+
+              <Link href="/about">
+                <button
+                  ref={btnRef}
+                  className="group relative overflow-hidden bg-pink-500 text-white px-8 py-4 rounded-full font-semibold text-[15px] tracking-wide shadow-lg shadow-pink-300/50 hover:shadow-pink-400/60 hover:scale-105 transition-all duration-300 active:scale-100"
+                  style={{ fontFamily: "'DM Sans', sans-serif" }}
+                >
                 <span className="absolute inset-0 bg-pink-600 translate-y-full group-hover:translate-y-0 transition-transform duration-300 rounded-full" />
                 <span className="relative z-10 flex items-center gap-2">
                   Know More
@@ -420,6 +423,7 @@ export default function AboutSection() {
                   </svg>
                 </span>
               </button>
+            </Link>
 
               <div
                 className="flex items-center gap-2 text-sm text-gray-400"

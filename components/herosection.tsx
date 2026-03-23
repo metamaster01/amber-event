@@ -1329,6 +1329,7 @@ import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -1555,6 +1556,10 @@ export default function HeroSection() {
               className="group relative px-8 py-4 bg-white text-pink-600 font-semibold rounded-full text-[15px] tracking-wide overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-pink-900/30 hover:scale-105 active:scale-100"
               style={{ fontFamily: "'DM Sans', sans-serif" }}
             >
+
+              <Link href="/contact">
+              
+              
               {/* Hover fill effect */}
               <span className="absolute inset-0 bg-pink-50 translate-y-full group-hover:translate-y-0 transition-transform duration-300 rounded-full" />
               <span className="relative z-10 flex items-center gap-2">
@@ -1569,6 +1574,8 @@ export default function HeroSection() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </span>
+
+              </Link>
             </button>
 
             {/* Stats badge */}

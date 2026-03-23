@@ -195,7 +195,7 @@ export default function AboutStory() {
             style={{ aspectRatio: "3/4" }}
           >
             <Image
-              src="/about-story.png"
+              src="/about-6.png"
               alt="Amber Events beautifully decorated venue"
               fill
               className="object-cover"

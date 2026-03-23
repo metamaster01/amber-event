@@ -60,12 +60,12 @@ export default function ContactHero() {
   return (
     <section
       ref={sectionRef}
-      className="relative h-[52vh] min-h-[360px] max-h-[560px] overflow-hidden flex items-end"
+      className="relative h-[85vh] min-h-[360px] max-h-[560px] overflow-hidden flex items-end"
     >
       {/* Background */}
       <div ref={imgRef} className="absolute inset-0 scale-110 origin-center">
         <Image
-          src="/contact-hero.png"
+          src="/contact-image.jpg"
           alt="Contact Amber Events"
           fill
           priority

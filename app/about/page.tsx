@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import FooterSection from "@/components/footersection";
 import PortfolioHero from "@/components/PortfolioHero";
 import ClientSection from "@/components/clientsection";
+import ContactSection from "@/components/contactsection";
 
 export const metadata: Metadata = {
   title: "About Us | Amber Events",
@@ -24,6 +25,7 @@ export default function AboutPage() {
         <AboutStory />
         <PortfolioHero />
         <ClientSection />
+        <ContactSection />
         <FooterSection />
       </main>
     </>
