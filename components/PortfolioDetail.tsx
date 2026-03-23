@@ -6,7 +6,7 @@ import Link from "next/link";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
-import type { PortfolioStory } from "@/data/portfolio-data";
+import type { PortfolioStory } from "@/context/portfolio-data";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -16,7 +16,7 @@ export default function PortfolioDetail({ story }: { story: PortfolioStory }) {
   const heroTitleRef = useRef<HTMLHeadingElement>(null);
   const heroSubRef = useRef<HTMLParagraphElement>(null);
   const storyRef = useRef<HTMLDivElement>(null);
-  const quoteRef = useRef<HTMLBlockquoteElement>(null);
+  const quoteRef = useRef<HTMLQuoteElement>(null);
   const statsRef = useRef<HTMLDivElement>(null);
   const servicesRef = useRef<HTMLDivElement>(null);
   const galleryRef = useRef<HTMLDivElement>(null);
