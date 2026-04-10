@@ -59,8 +59,8 @@ export const services: Service[] = [
     scriptTitle: "Events",
     tagline: "Where professionalism meets celebration.",
     quote: '"Elevating your brand, one event at a time."',
-    heroImage: "/service-1.png",
-    cardImage: "/service-1.png",
+    heroImage: "/corporate.jpg",
+    cardImage: "/corporate.jpg",
     shortDesc:
       "From high-profile product launches to annual galas, we design corporate experiences that leave lasting impressions. Our team handles every logistical detail so you can focus entirely on your business goals.",
     detailIntro:
@@ -89,8 +89,8 @@ export const services: Service[] = [
     scriptTitle: "Function",
     tagline: "Celebrate with colour, rhythm & soul.",
     quote: '"Every beat, every moment — made magical."',
-    heroImage: "/service-1.png",
-    cardImage: "/service-1.png",
+    heroImage: "/jalwa.jpg",
+    cardImage: "/jalwa.jpg",
     shortDesc:
       "Jalwa is where tradition explodes into colour. Sangeet nights, Mehndi ceremonies, Haldi functions — we curate the most vibrant pre-wedding celebrations that your family and friends will never forget.",
     detailIntro:
@@ -119,8 +119,8 @@ export const services: Service[] = [
     scriptTitle: "Service",
     tagline: "Flavours that tell your story.",
     quote: '"A feast worthy of your finest moments."',
-    heroImage: "/service-1.png",
-    cardImage: "/service-1.png",
+    heroImage: "/catering.jpg",
+    cardImage: "/catering.jpg",
     shortDesc:
       "Our catering service goes beyond food — it's an experience. From lavish buffet spreads to elegant plated dinners, our culinary team creates menus that delight every palate and elevate every occasion.",
     detailIntro:

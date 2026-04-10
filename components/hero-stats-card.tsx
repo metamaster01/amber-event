@@ -221,13 +221,20 @@ export default function HeroStats({ targetHref = "#testimonial", ctaLabel = "See
       aria-label="Hero"
       style={{
         minHeight: "90vh",
-        // Full-bleed background image
-        backgroundImage: "url(/background.jpg)",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
       }}
     >
+      {/* Background video */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+        aria-hidden="true"
+      >
+        <source src="/video-1.mp4" type="video/mp4" />
+      </video>
+
       {/* Subtle dark overlay for text contrast */}
       <div className="absolute inset-0 bg-black/20" aria-hidden="true" />
 
