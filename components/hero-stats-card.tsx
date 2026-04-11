@@ -176,11 +176,11 @@ type Props = {
   ctaLabel?: string
 }
 
-export default function HeroStats({ targetHref = "#testimonial", ctaLabel = "See testimonials" }: Props) {
+export default function HeroStats({ targetHref = "/#portfolio", ctaLabel = "See Our Client Stories" }: Props) {
   const rootRef = useRef<HTMLElement | null>(null)
   const [visible, setVisible] = useState(false)
   const [count, setCount] = useState(0)
-  const targetCount = 50
+  const targetCount = 500
 
   useEffect(() => {
     if (!rootRef.current) return
@@ -248,7 +248,7 @@ export default function HeroStats({ targetHref = "#testimonial", ctaLabel = "See
       >
         <div
           className={[
-            "relative rounded-[28px] bg-[#b74b0e] text-white",
+            "relative rounded-[28px] bg-[#e629a3] text-white",
             "shadow-xl w-[310px] md:w-[380px] p-5 md:p-6",
             "hover:shadow-2xl hover:scale-[1.02] transition-transform",
           ].join(" ")}
@@ -259,8 +259,8 @@ export default function HeroStats({ targetHref = "#testimonial", ctaLabel = "See
             aria-label={ctaLabel}
             className={[
               "absolute -top-5 -right-5 w-12 h-12 rounded-full",
-              "bg-[#a3440d] shadow-lg grid place-items-center",
-              "hover:bg-[#933e0c] transition-colors",
+              "bg-[#940a92] shadow-lg grid place-items-center",
+              "hover:bg-[#740c37] transition-colors",
             ].join(" ")}
           >
             <ArrowUpRight className="w-6 h-6 text-white" />

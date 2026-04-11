@@ -125,8 +125,8 @@ export const portfolioStories: PortfolioStory[] = [
     location: "Nagpur, Maharashtra",
     date: "August 2023",
     tagline: "Elevating a brand with an evening of elegance and purpose.",
-    coverImage: "/portfolio3.png",
-    heroImage: "/portfolio3.png",
+    coverImage: "/corporate-2.jpg",
+    heroImage: "/corporate-2.jpg",
     shortDesc:
       "A premium corporate gala that merged brand identity with luxury hospitality — seamless, sophisticated, and genuinely memorable.",
     storyIntro:
@@ -149,12 +149,12 @@ export const portfolioStories: PortfolioStory[] = [
       "Entertainment Management",
     ],
     galleryImages: [
-      { src: "/portfolio3.png", alt: "Gala hall overview", span: "wide" },
-      { src: "/portfolio3.png", alt: "Brand installation", span: "normal" },
-      { src: "/portfolio3.png", alt: "Award stage", span: "tall" },
-      { src: "/portfolio3.png", alt: "Dinner service", span: "normal" },
-      { src: "/portfolio3.png", alt: "Cocktail reception", span: "wide" },
-      { src: "/portfolio3.png", alt: "CEO on stage", span: "normal" },
+      { src: "/corporate-2.jpg", alt: "Gala hall overview", span: "wide" },
+      { src: "/corporate.jpg", alt: "Brand installation", span: "normal" },
+      { src: "/corporate-2.jpg", alt: "Award stage", span: "tall" },
+      { src: "/corporate-2.jpg", alt: "Dinner service", span: "normal" },
+      { src: "/corporate-2.jpg", alt: "Cocktail reception", span: "wide" },
+      { src: "/corporate-2.jpg", alt: "CEO on stage", span: "normal" },
     ],
     stats: [
       { label: "Guests", value: "600+" },
@@ -195,12 +195,12 @@ export const portfolioStories: PortfolioStory[] = [
       "Guest Experience",
     ],
     galleryImages: [
-      { src: "/portfolio4.png", alt: "Garden ceremony", span: "wide" },
-      { src: "/portfolio4.png", alt: "Mandap silk draping", span: "normal" },
-      { src: "/portfolio4.png", alt: "String quartet", span: "tall" },
-      { src: "/portfolio4.png", alt: "Dinner table", span: "normal" },
-      { src: "/portfolio4.png", alt: "Couple portrait", span: "wide" },
-      { src: "/portfolio4.png", alt: "Floral centrepiece", span: "normal" },
+      { src: "/portfolio2.png", alt: "Garden ceremony", span: "wide" },
+      { src: "/portfolio2.png", alt: "Mandap silk draping", span: "normal" },
+      { src: "/portfolio2.png", alt: "String quartet", span: "tall" },
+      { src: "/portfolio2.png", alt: "Dinner table", span: "normal" },
+      { src: "/portfolio2.png", alt: "Couple portrait", span: "wide" },
+      { src: "/portfolio2.png", alt: "Floral centrepiece", span: "normal" },
     ],
     stats: [
       { label: "Guests", value: "80" },
