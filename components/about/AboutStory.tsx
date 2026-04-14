@@ -5,6 +5,7 @@ import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
+import HeroStats from "../hero-stats-card";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -52,87 +53,129 @@ export default function AboutStory() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-
       // ── Quote reveal ─────────────────────────────────────────────────────
       if (quoteRef.current) {
         const split = new SplitText(quoteRef.current, { type: "words" });
-        gsap.fromTo(split.words,
+        gsap.fromTo(
+          split.words,
           { y: 40, opacity: 0 },
           {
-            y: 0, opacity: 1, stagger: 0.05, duration: 0.75, ease: "power3.out",
+            y: 0,
+            opacity: 1,
+            stagger: 0.05,
+            duration: 0.75,
+            ease: "power3.out",
             scrollTrigger: { trigger: quoteRef.current, start: "top 85%" },
-          }
+          },
         );
       }
 
       // ── Divider line draw ────────────────────────────────────────────────
-      gsap.fromTo(dividerRef.current,
+      gsap.fromTo(
+        dividerRef.current,
         { scaleX: 0, transformOrigin: "left center" },
         {
-          scaleX: 1, duration: 1, ease: "power3.out",
+          scaleX: 1,
+          duration: 1,
+          ease: "power3.out",
           scrollTrigger: { trigger: dividerRef.current, start: "top 88%" },
-        }
+        },
       );
 
       // ── Image clip-path wipe ─────────────────────────────────────────────
-      gsap.fromTo(imgRef.current,
+      gsap.fromTo(
+        imgRef.current,
         { clipPath: "inset(0 100% 0 0)", opacity: 0 },
         {
-          clipPath: "inset(0 0% 0 0)", opacity: 1, duration: 1.1, ease: "power4.out",
+          clipPath: "inset(0 0% 0 0)",
+          opacity: 1,
+          duration: 1.1,
+          ease: "power4.out",
           scrollTrigger: { trigger: imgRef.current, start: "top 85%" },
-        }
+        },
       );
 
       // ── Parallax on story image ──────────────────────────────────────────
       gsap.to(imgRef.current, {
-        y: -40, ease: "none",
+        y: -40,
+        ease: "none",
         scrollTrigger: {
-          trigger: imgRef.current, start: "top bottom", end: "bottom top", scrub: 1.5,
+          trigger: imgRef.current,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 1.5,
         },
       });
 
       // ── Text block paragraphs ────────────────────────────────────────────
       if (textBlockRef.current) {
         const paras = textBlockRef.current.querySelectorAll("p");
-        gsap.fromTo(paras,
+        gsap.fromTo(
+          paras,
           { y: 28, opacity: 0 },
           {
-            y: 0, opacity: 1, stagger: 0.12, duration: 0.7, ease: "power2.out",
+            y: 0,
+            opacity: 1,
+            stagger: 0.12,
+            duration: 0.7,
+            ease: "power2.out",
             scrollTrigger: { trigger: textBlockRef.current, start: "top 85%" },
-          }
+          },
         );
       }
 
       // ── Philosophy heading ───────────────────────────────────────────────
       if (philosophyHeadRef.current) {
-        const split2 = new SplitText(philosophyHeadRef.current, { type: "words" });
-        gsap.fromTo(split2.words,
+        const split2 = new SplitText(philosophyHeadRef.current, {
+          type: "words",
+        });
+        gsap.fromTo(
+          split2.words,
           { y: 50, opacity: 0 },
           {
-            y: 0, opacity: 1, stagger: 0.1, duration: 0.8, ease: "power3.out",
-            scrollTrigger: { trigger: philosophyHeadRef.current, start: "top 85%" },
-          }
+            y: 0,
+            opacity: 1,
+            stagger: 0.1,
+            duration: 0.8,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: philosophyHeadRef.current,
+              start: "top 85%",
+            },
+          },
         );
       }
 
-      gsap.fromTo(philosophyBodyRef.current,
+      gsap.fromTo(
+        philosophyBodyRef.current,
         { y: 25, opacity: 0 },
         {
-          y: 0, opacity: 1, duration: 0.7, ease: "power2.out",
-          scrollTrigger: { trigger: philosophyBodyRef.current, start: "top 88%" },
+          y: 0,
+          opacity: 1,
+          duration: 0.7,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: philosophyBodyRef.current,
+            start: "top 88%",
+          },
           delay: 0.15,
-        }
+        },
       );
 
       // ── Value cards ──────────────────────────────────────────────────────
       if (valueCardsRef.current) {
         const cards = valueCardsRef.current.querySelectorAll(".value-card");
-        gsap.fromTo(cards,
+        gsap.fromTo(
+          cards,
           { y: 40, opacity: 0 },
           {
-            y: 0, opacity: 1, stagger: 0.1, duration: 0.65, ease: "power3.out",
+            y: 0,
+            opacity: 1,
+            stagger: 0.1,
+            duration: 0.65,
+            ease: "power3.out",
             scrollTrigger: { trigger: valueCardsRef.current, start: "top 85%" },
-          }
+          },
         );
         cards.forEach((card) => {
           card.addEventListener("mouseenter", () => {
@@ -146,25 +189,35 @@ export default function AboutStory() {
 
       // ── Promise image parallax ───────────────────────────────────────────
       gsap.to(promiseImgRef.current, {
-        y: -50, ease: "none",
+        y: -50,
+        ease: "none",
         scrollTrigger: {
           trigger: promiseSectionRef.current,
-          start: "top bottom", end: "bottom top", scrub: 1.5,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 1.5,
         },
       });
 
       // ── Promise text ─────────────────────────────────────────────────────
       if (promiseSectionRef.current) {
         const els = promiseSectionRef.current.querySelectorAll(".promise-text");
-        gsap.fromTo(els,
+        gsap.fromTo(
+          els,
           { y: 30, opacity: 0 },
           {
-            y: 0, opacity: 1, stagger: 0.12, duration: 0.7, ease: "power3.out",
-            scrollTrigger: { trigger: promiseSectionRef.current, start: "top 80%" },
-          }
+            y: 0,
+            opacity: 1,
+            stagger: 0.12,
+            duration: 0.7,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: promiseSectionRef.current,
+              start: "top 80%",
+            },
+          },
         );
       }
-
     }, sectionRef);
 
     return () => ctx.revert();
@@ -172,10 +225,8 @@ export default function AboutStory() {
 
   return (
     <section ref={sectionRef} className="bg-white overflow-hidden">
-
       {/* ── 1. QUOTE + IMAGE + TEXT ──────────────────────────────────────── */}
       <div className="max-w-5xl mx-auto px-6 lg:px-12 pt-20 md:pt-28 pb-16 md:pb-24">
-
         <h2
           ref={quoteRef}
           className="text-[clamp(1.7rem,3.5vw,2.5rem)] font-semibold text-gray-800 leading-snug mb-10 tracking-tight"
@@ -187,7 +238,6 @@ export default function AboutStory() {
         <div ref={dividerRef} className="w-full h-px bg-gray-100 mb-14" />
 
         <div className="grid md:grid-cols-[1fr_1.2fr] gap-12 lg:gap-16 items-start">
-
           {/* Image */}
           <div
             ref={imgRef}
@@ -222,7 +272,6 @@ export default function AboutStory() {
       {/* ── 2. PHILOSOPHY ────────────────────────────────────────────────── */}
       <div className="bg-[#F9F5F0] py-20 md:py-28">
         <div className="max-w-5xl mx-auto px-6 lg:px-12">
-
           <div className="grid md:grid-cols-[1fr_1.4fr] gap-12 lg:gap-20 items-start">
             <div>
               <h2
@@ -233,7 +282,10 @@ export default function AboutStory() {
                 Our{" "}
                 <span
                   className="italic font-normal text-pink-500 block"
-                  style={{ fontFamily: "'Great Vibes', cursive", fontSize: "1.1em" }}
+                  style={{
+                    fontFamily: "'Great Vibes', cursive",
+                    fontSize: "1.1em",
+                  }}
                 >
                   Philosophy
                 </span>
@@ -284,9 +336,11 @@ export default function AboutStory() {
 
       {/* ── 3. FULL BLEED IMAGE + PROMISE ────────────────────────────────── */}
       <div ref={promiseSectionRef}>
+
         {/* Full bleed image */}
-        <div className="relative h-[55vw] max-h-[600px] min-h-[320px] overflow-hidden">
-          <div ref={promiseImgRef} className="absolute inset-0 scale-110 origin-center">
+        {/* <div className="absolute top-0 left-0 right-0 h-12 bg-gradient-to-t from-white to-transparent" /> */}
+        <div className="relative h-[75vw] max-h-[600px] min-h-[320px] overflow-hidden">
+          {/* <div ref={promiseImgRef} className="absolute inset-0 scale-110 origin-center">
             <Image
               src="/about-promise.png"
               alt="Beautiful floral arrangement at Amber Events"
@@ -294,13 +348,15 @@ export default function AboutStory() {
               className="object-cover object-center"
               sizes="100vw"
             />
-          </div>
+          </div> */}
+
+          <HeroStats />
           {/* Bottom fade into white */}
-          <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-white to-transparent" />
         </div>
 
         {/* Promise text */}
-        <div className="bg-white px-6 lg:px-12 pb-20 md:pb-28 max-w-5xl mx-auto">
+        <div className="bg-white px-6 lg:px-12 py-20 md:py-28 max-w-5xl mx-auto">
           <h3
             className="promise-text text-[clamp(2.5rem,5vw,4rem)] font-bold leading-[1.0] text-gray-900 tracking-tight mb-6"
             style={{ fontFamily: "'Playfair Display', serif" }}
@@ -308,7 +364,10 @@ export default function AboutStory() {
             Our{" "}
             <span
               className="italic font-normal text-pink-500"
-              style={{ fontFamily: "'Great Vibes', cursive", fontSize: "1.1em" }}
+              style={{
+                fontFamily: "'Great Vibes', cursive",
+                fontSize: "1.1em",
+              }}
             >
               Promise
             </span>
@@ -347,7 +406,6 @@ export default function AboutStory() {
           </div>
         </div>
       </div>
-
     </section>
   );
 }

@@ -473,7 +473,7 @@ export default function Footer() {
         />
         {/* Top fade to match pink footer */}
         <div
-          className="absolute top-0 left-0 right-0 h-20 pointer-events-none"
+          className="absolute top-0 left-0 right-0 h-10 pointer-events-none"
           style={{
             background:
               "linear-gradient(to bottom, #FF2D78 0%, transparent 100%)",

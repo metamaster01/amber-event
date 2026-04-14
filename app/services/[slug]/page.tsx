@@ -4,6 +4,9 @@ import Navbar from "@/components/navbar";
 import ServiceHero from "@/components/services/serviceHero";
 import ServiceIntro from "@/components/services/serviceIntro";
 import ServiceCTA from "@/components/services/ServiceCTA";
+import ContactSection from "@/components/contactsection";
+import TestimonialsSection from "@/components/clientsection";
+import Footer from "@/components/footersection";
 
 // ── Static params for all 4 services ────────────────────────────────────────
 export function generateStaticParams() {
@@ -44,6 +47,11 @@ export default async function ServiceDetailPage({
 
         {/* 3. Full bleed CTA banner with parallax */}
         <ServiceCTA service={service} />
+
+
+        <TestimonialsSection />
+        <ContactSection />
+        <Footer />
       </main>
     </>
   );
